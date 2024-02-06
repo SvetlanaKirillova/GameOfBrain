@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "AppUser.h"
+#import "Tournament.h"
+#import "Team.h" 
+#import <Security/Security.h>
+
 
 @interface ViewController : UIViewController
 

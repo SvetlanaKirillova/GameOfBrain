@@ -1,0 +1,45 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+.DS_Store
+
+Podfile.lock
+
+## User settings ##
+xcuserdata/
+
+### Xcode ###
+#MovieDate.xcodeproj/
+*.xcworkspace
+*.xcodeproj
+*.xctestplan
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+#
+
+
+.build/
+
+# CocoaPods
+Pods/
+
+
+# Carthage
+
+Carthage/Checkouts
+
+Carthage/Build/
+

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "KeychainItemWrapper.h"
+
 
 @interface AppDelegate ()
 
@@ -14,9 +17,21 @@
 
 @implementation AppDelegate
 
+@synthesize window, passwordItem, accountNumberItem;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"7Vl7NiK5SORi7LRfLZbqauMWBdktAJzHSxuYsxJ5"
+                  clientKey:@"rA0JN9w8evcAtPaDpVCca1joQY2ebf5ebmLJIdQV"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
@@ -41,5 +56,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
 
 @end

@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class KeychainItemWrapper, DetailViewController;
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    
+    KeychainItemWrapper *passwordItem;
+    KeychainItemWrapper *accountNumberItem;
+}
+
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, retain) KeychainItemWrapper *passwordItem;
+@property (nonatomic, retain) KeychainItemWrapper *accountNumberItem;
+
+@property (nonatomic, assign) BOOL hasInet;
 
 
 @end
